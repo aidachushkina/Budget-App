@@ -10,10 +10,20 @@ when you close the tab.
 
 ## Run it
 
+**Requires Node.js 20 or newer** (Vite 5 needs it; Node 16/18 will fail to start
+the dev server). Check with `node -v`. If you use nvm, run `nvm use` (an `.nvmrc`
+pins Node 20). In GitHub Codespaces the included devcontainer already uses Node 20.
+
 ```bash
 npm install
 npm run dev
 ```
+
+> Note: `npm audit` may warn about `esbuild`/`vite`. That advisory only affects
+> Vite's **dev server** talking to a browser on your own machine and does not
+> apply to this local-only app. **Do not run `npm audit fix --force`** — it would
+> upgrade Vite to a major version that breaks the build. The pinned versions here
+> are correct.
 
 Then open the printed URL (default <http://localhost:5173>). Click
 **"try it with synthetic sample data"** to explore with fake data, or upload your

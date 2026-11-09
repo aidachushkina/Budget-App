@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "description": "Local, privacy-first budget analysis for Revolut statement exports. All processing happens in your browser.",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
